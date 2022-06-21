@@ -3,6 +3,7 @@
  * swap - function tha switch two indexes
  * @low: min value
  * @high: max value
+ * @array: array to sort
  */
 void swap(int array[], int low, int high)
 {
@@ -15,6 +16,7 @@ void swap(int array[], int low, int high)
  * @array: array to sort
  * @low: min value
  * @high: max value
+ * @size: size of array
  * Return: integer
  */
 size_t partition(int array[], int low, int high, size_t size)
@@ -24,7 +26,7 @@ size_t partition(int array[], int low, int high, size_t size)
 
 	for (j = low; j < high; j++)
 	{
-		if (array[j] < pivot)
+		if (array[j] <= pivot)
 		{
 			if (i != j && array[i] != array[j])
 			{
@@ -47,6 +49,7 @@ size_t partition(int array[], int low, int high, size_t size)
  * @array: array to sort
  * @low: min value
  * @high: max value
+ * @size: size of array
  */
 void _sort(int array[], int low, int high, size_t size)
 {
